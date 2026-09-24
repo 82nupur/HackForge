@@ -67,13 +67,16 @@ def register():
 
     return redirect(url_for("home"))
 
+
 @app.route("/api/teams")
 def api_teams():
     return jsonify(teams)
 
+
 @app.route("/health")
 def health():
     return jsonify({"status": "ok"})
+
 
 if __name__ == "__main__":
     app.run(debug=True)
