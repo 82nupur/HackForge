@@ -49,5 +49,5 @@ def test_invalid_email(client):
         }
     )
 
-    assert response.status_code == 201
+    assert response.status_code == 400
     assert len(teams) == 0
